@@ -1,0 +1,272 @@
+/* styles.css */
+
+/* 1. Responsywność Nawigacji */
+
+/* Ukrywanie nawigacji na urządzeniach mobilnych */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 64px; /* Wysokość nagłówka */
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s;
+        background-color: #4B5563; /* Tailwind gray-700 */
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* Stylizacja przycisku menu hamburgera (domyślnie ukryty) */
+.menu-toggle {
+    display: none;
+}
+
+/* 2. Animacje */
+
+/* Definicja animacji fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Klasa do zastosowania animacji fade-in */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 3. Stylizacja Stopki */
+
+/* Stylizacja ikon w stopce */
+footer a {
+    display: flex;
+    align-items: center;
+}
+
+footer a i {
+    margin-right: 0.5rem;
+    transition: color 0.3s;
+}
+
+footer a:hover i {
+    color: #ef4444; /* Tailwind red-500 */
+}
+
+/* 4. Dodatkowe Niestandardowe Style */
+
+/* Stylizacja przycisków z klasą .btn-custom */
+.btn-custom {
+    background-color: #ef4444; /* Tailwind red-500 */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #dc2626; /* Tailwind red-600 */
+    transform: translateY(-2px);
+}
+
+/* Stylizacja nagłówków sekcji */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #ef4444; /* Tailwind red-500 */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Poprawki dla dostępności (Accessibility) */
+
+/* Kontrastowane focus dla elementów interaktywnych */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px dashed #ef4444; /* Tailwind red-500 */
+    outline-offset: 4px;
+}
+
+/* Ukrywanie elementów, ale pozostawienie ich dostępnych dla czytników ekranowych */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* 5. Globalne Style */
+
+/* Płynne przewijanie */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Stylizacja linków z klasą .underline-hover */
+.underline-hover:hover {
+    text-decoration: underline;
+}
+
+/* Płynne przejścia dla elementów interaktywnych */
+a,
+button,
+input,
+textarea {
+    transition: all 0.3s ease;
+}
+
+/* 6. Dostosowanie Mapy Google */
+
+/* Stylizacja kontenera mapy */
+#contact iframe {
+    border: 2px solid #ef4444; /* Tailwind red-500 */
+    border-radius: 8px;
+}
+
+/* 7. Inne Ulepszenia */
+
+/* Stylizacja formularza kontaktowego */
+#contact form {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact input,
+#contact textarea {
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #ef4444; /* Tailwind red-500 */
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5); /* Tailwind red-500 z przezroczystością */
+}
+/* Przykładowe style */
+body {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+/* style.css */
+
+/* Styl dla nagłówka menu */
+section.py-5 {
+    padding-top: 100px;
+}
+
+
+#contact {
+    background: url('images/contact-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 50px 0;
+}
+
+/* Karty galerii */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Galeria responsywna */
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* Stylizacja nagłówków */
+h2, h3 {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Efekt hover dla kart */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.gallery-img {
+    width: 100%; /* dopasowanie szerokości do kontenera */
+    height: 200px; /* przykładowa stała wysokość */
+    object-fit: cover; /* przycięcie obrazu, aby wypełnił cały obszar */
+    border-radius: 8px; /* opcjonalne zaokrąglenie rogów */
+}
+
+#contact .btn {
+    background-color: #ef4444; /* Tailwind red-500 */
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#contact .btn:hover {
+    background-color: #dc2626; /* Tailwind red-600 */
+    transform: translateY(-2px);
+}
