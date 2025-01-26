@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administratora - Land Restaurant</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Niestandardowy CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nawigacja -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Land Restaurant Logo" width="30" height="30" class="d-inline-block align-text-top">
+                Land Restaurant
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Strona Główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admin.html">Panel Administratora</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Treść strony -->
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Panel Administratora</h1>
+
+        <!-- Sekcja dodawania rezerwacji -->
+        <h2>Dodaj rezerwację</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Imię i nazwisko</label>
+                <input type="text" class="form-control" id="name" placeholder="Wprowadź imię i nazwisko">
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Data</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+            <div class="mb-3">
+                <label for="time" class="form-label">Godzina</label>
+                <input type="time" class="form-control" id="time">
+            </div>
+            <div class="mb-3">
+                <label for="guests" class="form-label">Liczba gości</label>
+                <input type="number" class="form-control" id="guests" min="1" max="20">
+            </div>
+            <div class="mb-3">
+                <label for="notes" class="form-label">Uwagi</label>
+                <textarea class="form-control" id="notes" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Dodaj rezerwację</button>
+        </form>
+
+        <!-- Sekcja rezerwacji oczekujących na akceptację -->
+        <h2 class="mt-5">Rezerwacje oczekujące na akceptację</h2>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Imię i nazwisko</th>
+                    <th>Data</th>
+                    <th>Godzina</th>
+                    <th>Goście</th>
+                    <th>Uwagi</th>
+                    <th>Status</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Przykładowe dane do wypełnienia tabeli -->
+                <tr>
+                    <td>1</td>
+                    <td>Jan Kowalski</td>
+                    <td>2025-06-15</td>
+                    <td>18:00</td>
+                    <td>4</td>
+                    <td>Urodziny</td>
+                    <td>Oczekuje</td>
+                    <td>
+                        <button class="btn btn-sm btn-success">Akceptuj</button>
+                        <button class="btn btn-sm btn-danger">Odrzuć</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Sekcja rezerwacji potwierdzonych -->
+        <h2 class="mt-5">Potwierdzone rezerwacje</h2>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Imię i nazwisko</th>
+                    <th>Data</th>
+                    <th>Godzina</th>
+                    <th>Goście</th>
+                    <th>Uwagi</th>
+                    <th>Status</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Na razie puste; dodamy logikę do wyświetlania potwierdzonych rezerwacji w przyszłości -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Stopka -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Land Restaurant. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

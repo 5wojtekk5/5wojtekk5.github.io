@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezerwacja - Land Restaurant</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Niestandardowy CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- Nawigacja -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Land Restaurant Logo" width="30" height="30" class="d-inline-block align-text-top">
+        Land Restaurant
+      </a>
+      <a href="login.html" class="btn-login ms-3">Zaloguj się</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona Główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">O Nas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="reservation.html">Rezerwacja</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Treść strony Rezerwacji -->
+  <section id="reservation" class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-lg border-0">
+            <div class="card-body">
+              <h2 class="text-center mb-4">Zarezerwuj stolik</h2>
+              <p class="text-center text-muted mb-4">
+                Wybierz dogodny termin i zarezerwuj miejsce dla siebie oraz swoich bliskich.
+              </p>
+              
+              <form id="reservationForm">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="reservationDate" class="form-label">Data</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="reservationDate"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="reservationTime" class="form-label">Godzina</label>
+                    <input
+                      type="time"
+                      class="form-control"
+                      id="reservationTime"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="guestCount" class="form-label">Liczba gości</label>
+                  <select
+                    class="form-select"
+                    id="guestCount"
+                    required
+                  >
+                    <option value="" selected disabled>Wybierz liczbę gości</option>
+                    <option value="1">1 osoba</option>
+                    <option value="2">2 osoby</option>
+                    <option value="3">3 osoby</option>
+                    <option value="4">4 osoby</option>
+                    <option value="5">5 osób</option>
+                    <option value="6">6 osób</option>
+                    <option value="7">7 osób</option>
+                    <option value="8">8 osób</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="specialRequests" class="form-label">Uwagi</label>
+                  <textarea
+                    class="form-control"
+                    id="specialRequests"
+                    rows="3"
+                    placeholder="Czy masz specjalne życzenia?"
+                  ></textarea>
+                </div>
+
+                <div class="d-grid">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg"
+                  >
+                    Zarezerwuj stolik
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekcja z dostępnością -->
+  
+
+  <!-- Stopka -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 Land Restaurant. Wszelkie prawa zastrzeżone.</p>
+      <div>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Skrypty -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>
