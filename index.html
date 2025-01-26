@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Restaurant</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Niestandardowy CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Nawigacja -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Land Restaurant Logo" width="30" height="30" class="d-inline-block align-text-top">
+                Land Restaurant
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Strona Główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">O Nas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sekcja Hero -->
+    <header id="home" class="vh-100 d-flex align-items-center" style="background-image: url('images/hero.jpg'); background-size: cover; background-position: center;">
+        <div class="container text-center text-white">
+            <h1 class="display-4">Witamy w Land Restaurant</h1>
+            <p class="lead">Wyjątkowe smaki w wyjątkowym miejscu</p>
+            <a href="menu.html" class="btn btn-primary btn-lg">Zobacz Menu</a>
+        </div>
+    </header>
+
+    <!-- Sekcja O Nas -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">O Nas</h2>
+            <p class="text-center">Land Restaurant to miejsce, gdzie tradycja spotyka nowoczesność. Nasz zespół pasjonatów kulinariów tworzy dania, które zachwycą każde podniebienie.</p>
+        </div>
+    </section>
+
+   
+
+    <!-- Sekcja Galeria -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Galeria</h2>
+            <div class="row">
+                <!-- Przykładowe zdjęcie -->
+                <div class="col-md-4 mb-4">
+                    <img src="images/danie1.jpeg" class="gallery-img" alt="Galeria 1">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/danie2.jpeg" class="gallery-img" alt="Galeria 2">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/danie3.jpeg" class="gallery-img" alt="Galeria 3">
+                </div>
+                <!-- Możesz dodać więcej zdjęć w podobny sposób -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Land Restaurant. Wszelkie prawa zastrzeżone.</p>
+            <div>
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS i zależności -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Niestandardowy JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
